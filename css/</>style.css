@@ -1,0 +1,261 @@
+/* Vekipedia Custom Styles */
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.prose {
+    color: #374151;
+    line-height: 1.75;
+}
+
+.prose p {
+    margin-bottom: 1.25em;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    color: #1f2937;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+}
+
+.prose h1 {
+    font-size: 1.5em;
+}
+
+.prose h2 {
+    font-size: 1.25em;
+}
+
+.prose h3, .prose h4 {
+    font-size: 1.125em;
+}
+
+/* Prefecture Button Hover Effects */
+.prefecture-btn {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.prefecture-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.prefecture-btn.active {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Category Button Styles */
+.category-btn {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-1px);
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Article Card Animations */
+.article-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Search Input Focus */
+#searchInput:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Modal Animations */
+.modal-enter {
+    animation: modalEnter 0.3s ease-out;
+}
+
+.modal-exit {
+    animation: modalExit 0.2s ease-in;
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modalExit {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+}
+
+/* Loading Animation */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+}
+
+.badge-primary {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-secondary {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.badge-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .prose {
+        font-size: 0.9rem;
+    }
+    
+    .prefecture-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .category-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Like Button Animation */
+.like-animation {
+    animation: likeHeart 0.6s ease-in-out;
+}
+
+@keyframes likeHeart {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+    30% { transform: scale(0.95); }
+    45% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Article Grid Layout */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Prefecture Colors */
+.prefecture-hokkaido { border-left: 4px solid #3b82f6; }
+.prefecture-aomori { border-left: 4px solid #10b981; }
+.prefecture-iwate { border-left: 4px solid #f59e0b; }
+.prefecture-miyagi { border-left: 4px solid #ef4444; }
+.prefecture-akita { border-left: 4px solid #8b5cf6; }
+.prefecture-yamagata { border-left: 4px solid #06b6d4; }
+.prefecture-fukushima { border-left: 4px solid #84cc16; }
+.prefecture-ibaraki { border-left: 4px solid #f97316; }
+.prefecture-tochigi { border-left: 4px solid #ec4899; }
+.prefecture-gunma { border-left: 4px solid #6366f1; }
+.prefecture-saitama { border-left: 4px solid #14b8a6; }
+.prefecture-chiba { border-left: 4px solid #eab308; }
+.prefecture-tokyo { border-left: 4px solid #dc2626; }
+.prefecture-kanagawa { border-left: 4px solid #7c3aed; }
+.prefecture-niigata { border-left: 4px solid #059669; }
+.prefecture-toyama { border-left: 4px solid #d97706; }
+.prefecture-ishikawa { border-left: 4px solid #be185d; }
+.prefecture-fukui { border-left: 4px solid #4338ca; }
+.prefecture-yamanashi { border-left: 4px solid #0d9488; }
+.prefecture-nagano { border-left: 4px solid #ca8a04; }
+.prefecture-gifu { border-left: 4px solid #e11d48; }
+.prefecture-shizuoka { border-left: 4px solid #7c2d12; }
+.prefecture-aichi { border-left: 4px solid #1e40af; }
+.prefecture-mie { border-left: 4px solid #047857; }
+.prefecture-shiga { border-left: 4px solid #b45309; }
+.prefecture-kyoto { border-left: 4px solid #be123c; }
+.prefecture-osaka { border-left: 4px solid #6d28d9; }
+.prefecture-hyogo { border-left: 4px solid #0e7490; }
+.prefecture-nara { border-left: 4px solid #a3a3a3; }
+.prefecture-wakayama { border-left: 4px solid #65a30d; }
+.prefecture-tottori { border-left: 4px solid #ea580c; }
+.prefecture-shimane { border-left: 4px solid #c2185b; }
+.prefecture-okayama { border-left: 4px solid #5b21b6; }
+.prefecture-hiroshima { border-left: 4px solid #0891b2; }
+.prefecture-yamaguchi { border-left: 4px solid #16a34a; }
+.prefecture-tokushima { border-left: 4px solid #dc2626; }
+.prefecture-kagawa { border-left: 4px solid #9333ea; }
+.prefecture-ehime { border-left: 4px solid #0284c7; }
+.prefecture-kochi { border-left: 4px solid #15803d; }
+.prefecture-fukuoka { border-left: 4px solid #f97316; }
+.prefecture-saga { border-left: 4px solid #db2777; }
+.prefecture-nagasaki { border-left: 4px solid #7c3aed; }
+.prefecture-kumamoto { border-left: 4px solid #dc2626; }
+.prefecture-oita { border-left: 4px solid #0891b2; }
+.prefecture-miyazaki { border-left: 4px solid #ca8a04; }
+.prefecture-kagoshima { border-left: 4px solid #166534; }
+.prefecture-okinawa { border-left: 4px solid #0ea5e9; }
